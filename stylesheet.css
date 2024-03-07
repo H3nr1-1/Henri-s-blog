@@ -4,6 +4,7 @@
 body {
     margin: 0;
     overflow: hidden;
+    overflow-y:auto;
     color:white;
     position: relative;
 }
@@ -31,10 +32,29 @@ header{
 }
 
 .intro{
-    border: 10px solid firebrick;
+    border: 10px inset firebrick;
     background: antiquewhite;
     font-family:"Barlow", sans-serif;
     color: black;
+}
+
+section{
+    margin-top: 10%;
+}
+
+.blog_content{
+    border: 10px inset firebrick;
+    background: antiquewhite;
+    font-family:"Barlow", sans-serif;
+    color: black;
+}
+
+.blog{
+    border:5px outset black;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding: 2%;
+    color:black;
 }
 
 h3{
@@ -44,4 +64,5 @@ h3{
 footer{
     font-family: "Barlow", sans-serif;
     font-size: smaller;
+    margin-top: 5%;
 }
