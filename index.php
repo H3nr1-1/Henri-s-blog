@@ -6,7 +6,7 @@
     $message = "";
     require_once("connect-db.php");
     
-    $sql = "SELECT * FROM blog";
+    $sql = "SELECT * FROM blog ORDER BY blog_date desc";
     
     $statement = $db->prepare($sql);
     
@@ -67,22 +67,24 @@
 			<section>
 				<div class="row">
 					<div class="col-md-2"></div>
-					<div class="col-md-8 blog_content">
-					<div class="blog">
+					<div class="col-md-8">
 
 						<?php                                              
                             foreach($blog as $b){
                         ?>
+					<div class="blog_content">
+					<div class="blog">
 
 						<?php echo $b["blog_date"];?><br>
 						<h3><?php echo $b["blog_title"];?></h3><br>
-						<?php echo $b["blog_content"];?>
+						<?php echo $b["blog_content"];?><br>
+					</div>
+					</div><br><br>					
 
 						<?php 
 							}
 						?>
 
-					</div>						
 					</div>
 					<div class="col-md-2"></div>
 				</div>
