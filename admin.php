@@ -37,8 +37,8 @@ if($_SESSION["admin-login"] != "true"){
 		<meta name="robots" content="index, follow">
 		<meta property="og:site_name" content="© Chris Henrickson Web Designer">
 		<meta property="og:type" content="website">
-		<meta property="og:title" content="Home - © Chris Henrickson Web Designer">
-		<meta property="og:url" content="https://www.c-henri.com/index">
+		<meta property="og:title" content="Admin - © Chris Henrickson Web Designer">
+		<meta property="og:url" content="https://www.c-henri.com/admin">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Bootstrap CDN links -->
 		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -46,7 +46,7 @@ if($_SESSION["admin-login"] != "true"){
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<link rel="stylesheet" href="stylesheet.css" type="text/css">
 		<!-- Logo and page title -->
-		<link rel="icon" href="Images/my-logo.png" type="image/x-icon">
+		<link rel="icon" href="my-logo.png" type="image/x-icon">
 		<title>Henri's Blog</title>
 	</head>
 	
@@ -66,7 +66,7 @@ if($_SESSION["admin-login"] != "true"){
                     <div class="col-md-8">
                         <h2>Submit New Blog Entry</h2>
                         <form action="blog_entry.php" method="POST">
-                        <input type="text" class="form-control" name="blog_date" required placeholder="Today's Date"><br>
+                        <input type="text" class="form-control" name="blog_date" required placeholder="Today's Date (YYYY/MM/DD Format)"><br>
                         <input type="text" class="form-control" name="blog_title" required placeholder="Title for Today's Blog Entry"><br>
                         <textarea id="message" class="form-control" name="blog_content" rows="5" required placeholder="Blog Content"></textarea>
                         <br>

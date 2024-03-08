@@ -39,7 +39,7 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 		<link rel="stylesheet" href="stylesheet.css" type="text/css">
 		<!-- Logo and page title -->
-		<link rel="icon" href="Images/my-logo.png" type="image/x-icon">
+		<link rel="icon" href="my-logo.png" type="image/x-icon">
 		<title>Henri's Blog</title>
 	</head>
 	
@@ -56,7 +56,7 @@
 			<article>
 				<div class="row">
 					<div class="col-md-3"></div>
-					<div class="col-md-6 intro rounded">
+					<div class="col-md-6 intro">
 					<h3>Welcome to my Blog</h3>
 						<p>Hello and Welcome!!  My name is Chris Henrickson and I am currently attending Northeast Wisconsin Technical College studying to obtain an associate degree in Web Development.  In 2022-2023 I attended Lakeshore Technical College and completed a technical diploma as a Web Development Specialist.  My future plan is to become a Front-end developer or web designer.  I am creating this blog as a project to showcase some of my skills using, HTML5, CSS, Bootstrap5, PHP, and JavaScript.<br><br>Thank you for taking the time to check out my website!!</p>
 					</div>
@@ -72,7 +72,7 @@
 						<?php                                              
                             foreach($blog as $b){
                         ?>
-					<div class="blog_content rounded-4">
+					<div class="blog_content rounded">
 					<div class="blog">
 
 						<?php echo $b["blog_date"];?><br>
@@ -84,7 +84,6 @@
 						<?php 
 							}
 						?>
-
 					</div>
 					<div class="col-md-2"></div>
 				</div>
