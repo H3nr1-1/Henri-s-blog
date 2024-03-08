@@ -32,8 +32,13 @@ header{
     padding: 5%;
 }
 
+#coding{
+    width:100%;
+}
+
 .intro{
     border: 10px inset firebrick;
+    text-align: center;
     background: antiquewhite;
     font-family:"Barlow", sans-serif;
     color: black;
@@ -46,6 +51,7 @@ section{
 .blog_content{
     border: 10px inset firebrick;
     font-family: "Cedarville Cursive", cursive;
+    box-shadow: 0px 0px 20px black;
     font-size: 125%;
     background: antiquewhite;
     color: black;
@@ -60,13 +66,40 @@ section{
     color:black;
 }
 
+h2{
+    text-align: center;
+    font-family:"Barlow", sans-serif;
+}
+
 h3{
     text-align: center;
     font-family:"Barlow", sans-serif;
+}
+
+.login_content{
+    border: 10px inset firebrick;
+    border-radius: 5%;
+    font-family: "Barlow", sans-serif;
+    box-shadow: 0px 0px 20px black;
+    font-size: 125%;
+    background: antiquewhite;
+    color: black;
+    padding:2%;
+}
+
+.login{
+    text-align: center;
+}
+
+#entry{
+    font-family: "Barlow", sans-serif;
+    margin: 0 auto;
+    display:block;
 }
 
 footer{
     font-family: "Barlow", sans-serif;
     font-size: smaller;
     margin-top: 5%;
+    padding: 3%;
 }

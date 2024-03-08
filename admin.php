@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION["admin-login"] != "true"){
+    header('Location: login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,16 +60,22 @@
 
 			<?php include("header.html");?>
 
-			<article>
-				<div class="row">
-					<div class="col-md-3"></div>
-					<div class="col-md-6 intro rounded">
-					<h3>Welcome to my Blog</h3>
-						<p>Hello and Welcome!!  My name is Chris Henrickson and I am currently attending Northeast Wisconsin Technical College studying to obtain an associate degree in Web Development.  In 2022-2023 I attended Lakeshore Technical College and completed a technical diploma as a Web Development Specialist.  My future plan is to become a Front-end developer or web designer.  I am creating this blog as a project to showcase some of my skills using, HTML5, CSS, Bootstrap5, PHP, and JavaScript.<br><br>Thank you for taking the time to check out my website!!</p>
-					</div>
-					<div class="col-md-3"></div>
-				</div>
-			</article>
+			<section>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <h2>Submit New Blog Entry</h2>
+                        <form action="blog_entry.php" method="POST">
+                        <input type="text" class="form-control" name="blog_date" required placeholder="Today's Date"><br>
+                        <input type="text" class="form-control" name="blog_title" required placeholder="Title for Today's Blog Entry"><br>
+                        <textarea id="message" class="form-control" name="blog_content" rows="5" required placeholder="Blog Content"></textarea>
+                        <br>
+                        <button type="submit" class="btn btn-primary" id="entry">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </section>
 
 			<section>
 				<div class="row">
@@ -72,12 +85,23 @@
 						<?php                                              
                             foreach($blog as $b){
                         ?>
-					<div class="blog_content rounded-4">
+					<div class="blog_content">
 					<div class="blog">
 
 						<?php echo $b["blog_date"];?><br>
 						<h3><?php echo $b["blog_title"];?></h3><br>
-						<?php echo $b["blog_content"];?><br>
+						<?php echo $b["blog_content"];?><br><br>
+
+                        <form action="edit_entry.php" method="GET">
+                        <input type="hidden" name="blog_id" value="<?php echo $b["blog_id"];?>">
+                        <button type="submit" class="btn btn-outline-primary form-control" id="entry">Edit Blog Entry</button>
+                        </form>
+                        <br>
+                        <form action="delete.php" method="GET">
+                        <input type="hidden" name="blog_id" value="<?php echo $b["blog_id"];?>">
+                        <button onclick="return confirm('Are you sure you want to delete this blog entry')" type="submit" class="btn btn-outline-danger form-control" id="entry">Delete Entry</button>
+                        </form>
+
 					</div>
 					</div><br><br>					
 
@@ -89,6 +113,18 @@
 					<div class="col-md-2"></div>
 				</div>
 			</section>
+
+            <div class="row">
+                <div class="col-md-7"></div>
+                <div class="col-md-1">
+                    <form action="logout.php" method="POST">
+                    <button type="submit" class="btn btn-danger">Sign Out</button>
+                    </form>
+                </div>
+                <div class="col-md-4">
+            </div>
+            <br>
+            <br>
 
 			<?php include("footer.html");?>
 
