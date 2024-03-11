@@ -61,7 +61,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 	<body>
 
     <video id="video-background" autoplay muted loop>
-        <source src="embers_background.mp4" type="video/mp4">
+    <source src="snow_campfire.mp4" type="video/mp4">
     </video>
 
 		<div class="container">
