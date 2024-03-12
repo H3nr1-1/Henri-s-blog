@@ -26,9 +26,9 @@
 	
 	<body>
 
-    <video id="video-background" autoplay muted loop>
-	<source src="campfire.mp4" type="video/mp4">
-    </video>
+			<video id="video-background" autoplay muted loop>
+			<source src="campfire.mp4" type="video/mp4">
+			</video>	
 
 		<div class="container">
 
